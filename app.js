@@ -9,7 +9,7 @@ function createContentFromTemplate() {
     let content = document.querySelector('#hashnode-content');
 
     // Let 'body' as DOMElement with value 'body'
-    let body = document.querySelector('body');
+    let body = document.querySelector('.hashnode-writer');
 
     // Let 'nodeImport' as DOMElement with value 'importNode' -> content.content, true
     let nodeImport = document.importNode(content.content, true);
