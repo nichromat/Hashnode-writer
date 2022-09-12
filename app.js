@@ -14,11 +14,14 @@ function createContentFromTemplate() {
     // Let 'nodeImport' as DOMElement with value 'importNode' -> content.content, true
     let nodeImport = document.importNode(content.content, true);
 
+    nodeImport.childNodes[1].id = id++;
     // 'body' -> 'appendChild' -> nodeImport
     body.appendChild(nodeImport)
 }
 
 
+let id = 0;
 let addContentBottom = document.querySelector('.add-content-to-bottom');
+
 
 addContentBottom.addEventListener('click', createContentFromTemplate);
